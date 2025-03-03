@@ -3,8 +3,7 @@ import config from "../config/index";
 import { useFavoritoContext } from "context/Favoritos/FavoritosContext";
 import iconeFavoritar from "./favoritar.png";
 import iconeDesfavoritar from "./desfavoritar.png";
-
-
+import { Link } from "react-router-dom";
 
 const Card = ({ id, titulo, capa }) => {
   console.log(id, titulo, capa);
@@ -15,8 +14,11 @@ const Card = ({ id, titulo, capa }) => {
 
   return (
     <div className={styles.container}>
-      <img src={capa} alt={titulo} className={styles.capa} />
-      <h2>{titulo}</h2>
+      <Link className={styles.Link} to={`/video/${id}`}>
+        <img src={capa} alt={titulo} className={styles.capa} />
+        <h2>{titulo}</h2>
+      </Link>
+
       <img
         src={icone}
         alt="Favoritar filme"
