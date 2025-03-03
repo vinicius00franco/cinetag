@@ -1,5 +1,5 @@
 .container {
-  padding: 0 0 1em 0;
+  padding: 0 0.5em 1em 0.5em;
   margin-top: 0.5em;
   width: 202px;
   background-color: var(--cinza);
@@ -10,6 +10,8 @@
 
 .capa {
   width: 100%;
+  height: 300px;
+  /* object-fit: cover; */
 }
 
 .container h2,
@@ -18,9 +20,16 @@
 }
 
 .favoritar {
+
   width: 25px;
+  height: 25px; 
 }
 
+.container__icone_favoritar {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+}
 
 .link {
   text-decoration: none;

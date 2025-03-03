@@ -7,22 +7,19 @@ import Rodape from "./components/Rodape";
 import FavoritosProvider from "context/Favoritos/FavoritosContext";
 import Player from "pages/Player";
 import NaoEncontrada from "pages/NaoEncontrada";
+import PaginaBase from "pages/PaginaBase";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
-      <Cabecalho />
-      <FavoritosProvider>
-        <Container>
-          <Routes>
-            <Route path="/" element={<Inicio />}></Route>
-            <Route path="/favoritos" element={<Favoritos />}></Route>
-            <Route path="/video/:id" element={<Player />}></Route>
-            <Route path="*" element={<NaoEncontrada />}></Route>
-          </Routes>
-        </Container>
-      </FavoritosProvider>
-      <Rodape />
+      <Routes>
+        <Route path="/" element={<PaginaBase />}>
+          <Route index element={<Inicio />}></Route>
+          <Route path="favoritos" element={<Favoritos />}></Route>
+          <Route path="video/:id" element={<Player />}></Route>
+          <Route path="*" element={<NaoEncontrada />}></Route>
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 };

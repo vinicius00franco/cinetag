@@ -2,4 +2,8 @@
 .container {
   display: flex;
   justify-content: space-around;
+  padding: 5% 0;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+
 }
