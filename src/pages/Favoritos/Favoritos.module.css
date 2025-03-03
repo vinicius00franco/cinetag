@@ -1,0 +1,5 @@
+/* Inicio/Inicio.module.css  */
+.container {
+    display: flex;
+    justify-content: space-around;
+  }
